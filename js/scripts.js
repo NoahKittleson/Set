@@ -7,30 +7,14 @@ function Card (propertyArray) {
 
 function isSet(cardArray) {
   //return true or false if it is in a set
+  var bool = true;
   for (var i = 0; i < properties.length; i++) {
     if ((cardArray[0].properties[i] === cardArray[1].properties[i] && cardArray[1].properties[i] === cardArray[2].properties[i] ) || cardArray[0].properties[i] !== cardArray[1].properties[i] && cardArray[1].properties[i] !== cardArray[2].properties[i] && cardArray[0].properties[i] !== cardArray[2].properties[i]) {
     } else {
-      return false;
+      bool = false;
     }
   }
-  return true;
-
-
-  // for (var i = 0; i < properties.length; i++) {
-  //   if ((cardArray[0].properties[i] === cardArray[1].properties[i] && cardArray[1].properties[i] === cardArray[2].properties[i] ) || cardArray[0].properties[i] !== cardArray[1].properties[i] && cardArray[1].properties[i] !== cardArray[2].properties[i] && cardArray[0].properties[i] !== cardArray[2].properties[i]) {
-  //   } else {
-  //     return false;
-  //   }
-  // }
-  // return true;
-
-  //
-  //
-  // if ((cardArray[0].properties[i] === cardArray[1].color && cardArray[1].color === cardArray[2].color ) || cardArray[0].color !== cardArray[1].color && cardArray[1].color !== cardArray[2].color && cardArray[0].color !== cardArray[2].color) {
-  //   return true;
-  // } else {
-  //   return false;
-  // }
+  return bool;
 }
 
 function getRandomCard() {
@@ -48,14 +32,12 @@ $(document).ready(function() {
   for (var i = 0; i < 12; i++) {
     cards.push(getRandomCard());
   }
-  var bool = isSet(cards);
-  console.log(bool);
-
+  
   goodSet =[];
-  goodSet.push(new Card(["red","squigly", 1, "empty"]));
-  goodSet.push(new Card(["red","squigly", 1, "empty"]));
-  goodSet.push(new Card(["red","squigly", 1, "empty"]));
+  goodSet.push(new Card(["red","squigly", 1, "emptty"]));
+  goodSet.push(new Card(["green","sqruigly", 2, "efmpty"]));
+  goodSet.push(new Card(["hi","squiggly", 3, "emmpty"]));
 
-  isSet(goodSet);
+  console.log(isSet(goodSet));
   console.log(cards);
 });
