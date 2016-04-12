@@ -6,9 +6,166 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.3.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/effects.js"></script>
+    <title>Default Format</title>
+  </head>
+
+  <body>
+    <div class="container header">
+      <div class="heading">
+        <h1>Set</h1>
+      </div>
+    </div>
+    <div class="container body">
+      <div class="row">
+        <div class="col-xs-10">
+          <h1>Set:</h1>
+        </div>
+        <div class="col-xs-2">
+          <h3>Score:</h3>
+          <ul id="score">
+
+          </ul>
+        </div>
+      </div>
+      <div class="row move">
+        <h2>Select:</h2>
+      </div>
+      <form class="" action="index.html" method="post">
+        <div class="row move">
+          <div class="col-xs-4 size">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="card1" name="name" value="card1">Card1
+            </label>
+          </div>
+          <div class="col-xs-4 size">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="card2" name="name" value="card2">Card2
+            </label>
+          </div>
+          <div class="col-xs-4 size">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="card3" name="name" value="card3">Card3
+            </label>
+          </div>
+        </div>
+        <div class="row move">
+          <div class="col-xs-4 size">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="card4" name="name" value="card4">Card4
+            </label>
+          </div>
+          <div class="col-xs-4 size">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="card5" name="name" value="card5">Card5
+            </label>
+          </div>
+          <div class="col-xs-4 size">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="card6" name="name" value="card6">Card6
+            </label>
+          </div>
+        </div>
+        <div class="row move">
+          <div class="col-xs-4 size">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="card7" name="name" value="card7">Card7
+            </label>
+          </div>
+          <div class="col-xs-4 size">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="card8" name="name" value="card8">Card8
+            </label>
+          </div>
+          <div class="col-xs-4 size">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="card9" name="name" value="card9">Card9
+            </label>
+          </div>
+        </div>
+        <div class="row move">
+          <div class="col-xs-4 size">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="card10" name="name" value="card10">Card10
+            </label>
+          </div>
+          <div class="col-xs-4 size">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="card11" name="name" value="card11">Card11
+            </label>
+          </div>
+          <div class="col-xs-4 size">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="card12" name="name" value="card12">Card12
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn">SUBMIT</button>
+        <br></br>
+        <div class="row button-row">
+        <button type="button"  class="btn btn-default play" name="button"><img  src = "img/submit.png"></button>
+        <button type="button" id="replay" class="btn btn-default play" name="button"><img src = "img/submit.png"></button>
+        </div>
+        <br></br>
+        <div class="row rules">
+          <button type="button" class="btn btn-default play" id="modal-rules" name="button">Rules</button>
+
+        </div>
+
+      </form>
+
+      <!-- MODAL -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Rules:</h4>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- END OF MODAL -->
+
+    </div>
+  </body>
+
+</html>
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/scripts.js"></script>
     <title>Default Format</title>
   </head>
   <body>
-
+    <div id="card1">
+      <span class="content"></span>
+    </div>
+    <div id="card2">
+      <span class="content"></span>
+    </div>
+    <div id="card3">
+      <span class="content"></span>
+    </div>
+    <div id="card4">
+      <span class="content"></span>
+    </div>
+    <div id="card5">
+      <span class="content"></span>
+    </div>
+    <div id="card6">
+      <span class="content"></span>
+    </div>
+    <div id="card7">
+      <span class="content"></span>
+    </div>
   </body>
-</html>
+</html> -->
