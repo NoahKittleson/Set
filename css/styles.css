@@ -34,6 +34,7 @@
   background-color: lightpink;
   border-radius: 20px;
   margin: 8px;
+<<<<<<< HEAD
   opacity: 0.8;
   box-shadow: 3px 3px 5px 5px #666699;
 }
@@ -69,6 +70,20 @@
   display: none;
 }
 
+=======
+    opacity: 0.8;
+}
+
+.move {
+  padding-left: 13.5%;
+  padding-right: 13.5%;
+}
+
+.container {
+  min-width: 70%;
+}
+
+>>>>>>> 672de99ef0b57a118b9d6f9d19de21a3a7cc9ab0
 /*button styles-------------------------*/
 .play {
   text-align: center;
@@ -112,7 +127,10 @@
 .modal-body p {
   font-size: 16px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 672de99ef0b57a118b9d6f9d19de21a3a7cc9ab0
 .modal-body li {
   font-size: 16px;
 }

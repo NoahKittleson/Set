@@ -1,4 +1,5 @@
 
+
 $(document).ready(function(event) {
   event.preventDefault;
   $("#modal-rules").click(function(event) {
