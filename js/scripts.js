@@ -75,7 +75,9 @@ $(document).ready(function() {
     newCard = newDeck.getRandomCard();
     console.log(newCard.getID());
     $("." + cardIDArray[i]).attr("value", newCard.getID());
-    $("." + cardIDArray[i]).text(newCard.getID());
+    str = newCard.getID();
+    str = str.substring(0, str.length-1);
+    $("." + cardIDArray[i]).attr("src", "img/" + str + ".png");
     //cards.push(newDeck.getRandomCard());
   }
 
