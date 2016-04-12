@@ -69,8 +69,12 @@ function generateRandomCard() {
 $(document).ready(function() {
   var newDeck = new Deck();
   var cardIDArray = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "card11", "card12"];
+  var newCard
   for (var i = 0; i < cardIDArray.length; i++) {
-    $("#" + cardIDArray[i]).attr("value", newDeck.getRandomCard().getID());
+    newCard = newDeck.getRandomCard();
+    console.log(newCard.getID());
+    $("." + cardIDArray[i]).attr("value", newCard.getID());
+    $("." + cardIDArray[i]).text(newCard.getID());
     //cards.push(newDeck.getRandomCard());
   }
 
@@ -88,7 +92,13 @@ $(document).ready(function() {
     // });
 
     console.log(chosenCards);
-
+    var parsedCards = [];
+    for (var i = 0; i < chosenCards.length; i++) {
+      var split = chosenCards[i].split(" ");
+      parsedCards.push(new Card([split[0],split[1],split[2],split[3]]));
+    }
+    console.log(parsedCards);
+    alert(isSet(parsedCards));
   })
   //console.log(isSet(goodSet));
   //console.log(cards);
