@@ -6,7 +6,10 @@
   border: 2px solid lightblue;
   border-radius: 20px;
 }
-
+.countDown {
+  color: green;
+  text-shadow: 2px -5px 8px #EBF0A8;
+}
 .header {
   background-color: #D1F9F7;
   border-radius: 20px;
@@ -31,7 +34,8 @@
   background-color: lightpink;
   border-radius: 20px;
   margin: 8px;
-    opacity: 0.8;
+  opacity: 0.8;
+  box-shadow: 3px 3px 5px 5px #666699;
 }
 
 .move {
@@ -60,17 +64,30 @@
   opacity: 0.8;
 }
 
-.hidden-ds {
+#hidden-ds {
   min-width: 80%;
+  display: none;
 }
 
 /*button styles-------------------------*/
 .play {
   text-align: center;
-  min-width: 150px;
+  max-width: 120px;
   max-height: 80px;
   margin-left: 10px;
   margin-right: 10px;
+  box-shadow: 1px 1px 3px 3px;
+}
+.time-btn {
+  text-align: center;
+  min-width: 90px;
+  max-height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 1px 1px 2px 2px;
+}
+.timer {
+  text-align: center;
 }
 .button-row {
   text-align: center;
@@ -95,6 +112,7 @@
 .modal-body p {
   font-size: 16px;
 }
+
 .modal-body li {
   font-size: 16px;
 }

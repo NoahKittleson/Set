@@ -21,9 +21,6 @@
     </div>
     <div class="container body">
       <div class="row">
-        <div class="col-xs-10">
-          <h1>Set:</h1>
-        </div>
         <div class="col-xs-2">
           <h3>Score:</h3>
           <ul id="score">
@@ -31,10 +28,26 @@
           </ul>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="timer">Timer:</h2>
+          <h4 class="timer countDown" id="timer">00:00</h4>
+          <div class="row button-row">
+            <button type="button"  id="start" class="btn btn-default time-btn" name="button">Play</button>
+            <button type="button"  id="pause" class="btn btn-default time-btn" name="button">Pause</button>
+            <button type="button"  id="resume" class="btn btn-default time-btn" name="button">Resume</button>
+          </div>
+        </div>
+      </div>
+
+
+
 <!--Hidden Double Set ----------------->
       <button type="button" class="btn btn-default double-set" id="double-set" name="button">Double Set</button>
+      <br></br>
 
-      <div class="hidden-ds">
+      <div id="hidden-ds">
           <div class="row hd-move">
             <div class="col-lg-2 hide-input">
               <span id="ds-1"></span>
@@ -53,7 +66,6 @@
             </div>
           </div>
       </div>
-
 
 <!--Cards------------------------------->
       <div class="row move">
@@ -170,9 +182,11 @@
           </div>
         </div>
         <br></br>
+
+
         <div class="row button-row">
-        <button type="button"  class="btn btn-default play" name="button"><img  src = "img/submit.png"></button>
-        <button type="button" id="replay" class="btn btn-default play" name="button"><img src = "img/reset.png"></button>
+          <button type="button" id="replay" class="btn btn-default play" name="button"><img src = "img/reset.png"></button>
+          <button type="submit" id="submit" class="btn btn-default play" name="button"><img src = "img/submit2.png"></button>
         </div>
         <br></br>
         <div class="row rules">
@@ -202,7 +216,7 @@
                          <li>Shape: ovals, squiggles, diamonds</li>
                          <li>Color: red, purple, green</li>
                          <li>Number: one, two, three</li>
-                         <li>Shading solid, striped, outlined</li>
+                         <li>Shading: solid, striped, outlined</li>
                        </ul>
                        <p>A SET consists of 3 cards in which each of the cards' features, looked at one-by-one, are the same on each card, or, are different on each card. All of the features must seperately satisfy this rule. In other words: shape must be either the same on all 3 cards, or different on each othe 3 cards; color must be either the same on all 3 cards, or different on each othe 3, etc.
                        </p>
