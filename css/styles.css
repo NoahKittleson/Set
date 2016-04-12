@@ -41,3 +41,23 @@
 .rules {
   text-align: center;
 }
+
+/*Modal Styling:*/
+.video {
+  padding-right: 10%;
+  padding-top: 2%;
+}
+.modal-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+.modal-body p {
+  font-size: 16px;
+}
+.modal-body li {
+  font-size: 16px;
+}
+#title {
+  font-size: 20px;
+}
