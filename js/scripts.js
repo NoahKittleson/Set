@@ -81,24 +81,44 @@ $(document).ready(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
-    var chosenCards = [];
+    var chosenCardIDs = [];
 
-
+    //this is a clusterfuck, I need to cut this down.
     $("input:checkbox[name=name]:checked").each(function(){
-      chosenCards.push($(this).val());
+      chosenCardIDs.push($(this).val());
     });
-    // chosenCards.forEach(function(card) {
+    // chosenCardIDs.forEach(function(card) {
     //   $("#" + card).attr("value", "test");
     // });
+    chosenIDs = [];
+    $("input:checkbox").each(function(){
+      var $this = $(this);
 
-    console.log(chosenCards);
+      if($this.is(":checked")){
+          chosenIDs.push($this.attr("class"));
+      }
+    });
+    console.log(chosenIDs);
+
+    console.log(chosenCardIDs);
     var parsedCards = [];
-    for (var i = 0; i < chosenCards.length; i++) {
-      var split = chosenCards[i].split(" ");
+    for (var i = 0; i < chosenCardIDs.length; i++) {
+      var split = chosenCardIDs[i].split(" ");
       parsedCards.push(new Card([split[0],split[1],split[2],split[3]]));
     }
     console.log(parsedCards);
-    alert(isSet(parsedCards));
+
+    result = isSet(parsedCards);
+    alert(result);
+    if (result) {
+      for (var i = 0; i < chosenIDs.length; i++) {
+        newCard = newDeck.getRandomCard();
+        console.log(newCard.getID());
+        $("." + chosenIDs[i]).attr("value", newCard.getID());
+        $("." + chosenIDs[i]).text(newCard.getID());
+        //cards.push(newDeck.getRandomCard());
+      }
+    }
   })
   //console.log(isSet(goodSet));
   //console.log(cards);
