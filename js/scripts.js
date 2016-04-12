@@ -32,7 +32,8 @@ Deck.prototype.printDeck = function() {
 Deck.prototype.getRandomCard = function() {
   var rand = Math.floor(Math.random() * 1000);
   rand = rand % this.cards.length;
-  return this.cards[rand];
+  var randomCard = this.cards.splice(rand,1);
+  return randomCard[0];
 }
 
 Card.prototype.getID = function() {
