@@ -9,7 +9,7 @@ Card.prototype.getID = function() {
   var string = "";
   this.properties.forEach(function(property) {
     string = string.concat(property + " ");
-  });
+  })
   return string;
 }
 
@@ -41,12 +41,26 @@ function isSet(cardArray) {
   //return true or false if it is in a set
   var bool = true;
   for (var i = 0; i < properties.length; i++) {
-    if ((cardArray[0].properties[i] === cardArray[1].properties[i] && cardArray[1].properties[i] === cardArray[2].properties[i] ) || cardArray[0].properties[i] !== cardArray[1].properties[i] && cardArray[1].properties[i] !== cardArray[2].properties[i] && cardArray[0].properties[i] !== cardArray[2].properties[i]) {
+    if ((cardArray[0].properties[i] === cardArray[1].properties[i] && cardArray[1].properties[i] === cardArray[2].properties[i]) || (cardArray[0].properties[i] !== cardArray[1].properties[i] && cardArray[1].properties[i] !== cardArray[2].properties[i] && cardArray[0].properties[i] !== cardArray[2].properties[i])) {
     } else {
       bool = false;
     }
   }
   return bool;
+}
+
+function isDoubleSet(cardArray) {
+  //return true or false if it is in a set
+  var bool = true;
+  for (var i = 0; i < properties.length; i++) {
+    if ((cardArray[2].properties[i] === cardArray[3].properties[i] && cardArray[3].properties[i] === cardArray[4].properties[i]) || cardArray[2].properties[i] !== cardArray[3].properties[i] && cardArray[3].properties[i] !== cardArray[4].properties[i] && cardArray[2].properties[i] !== cardArray[4].properties[i]) {
+    } else {
+      bool = false;
+    }
+  }
+  if (isSet(cardArray)) {
+    return bool;
+}
 }
 
 function getRandomCard() {
@@ -64,6 +78,7 @@ $(document).ready(function() {
   for (var i = 0; i < 12; i++) {
     cards.push(getRandomCard());
   }
+
   console.log(createDeck());
   //console.log(cards[0].getID(););
 
@@ -71,7 +86,9 @@ $(document).ready(function() {
   goodSet.push(new Card(["red","squigly", 1, "emptty"]));
   goodSet.push(new Card(["green","sqruigly", 2, "efmpty"]));
   goodSet.push(new Card(["hi","squiggly", 3, "emmpty"]));
+  goodSet.push(new Card(["green","sqruigly", 2, "efmpty"]));
+  goodSet.push(new Card(["green","sqruigly", 2, "efmpty"]));
 
-  //console.log(isSet(goodSet));
+  console.log(isDoubleSet(goodSet));
   //console.log(cards);
 });
