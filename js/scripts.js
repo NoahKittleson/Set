@@ -1,4 +1,4 @@
-var properties = [["red", "purple", "green"], ["squigly", "diamond", "pill"], [1, 2, 3], ["empty", "crosshatch", "full"]];
+var properties = [["red", "purple", "green"], ["squiggle", "diamond", "pill"], [1, 2, 3], ["empty", "crosshatch", "full"]];
 var cards = [];
 
 function Card (propertyArray) {
@@ -81,33 +81,19 @@ $(document).ready(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
-    var chosenCardIDs = [];
 
-    //this is a clusterfuck, I need to cut this down.
+    //parse all input (IDs --> Card objects)
+    var chosenIDs = [];
+    var parsedCards = [];
     $("input:checkbox[name=name]:checked").each(function(){
-      chosenCardIDs.push($(this).val());
-    });
-    // chosenCardIDs.forEach(function(card) {
-    //   $("#" + card).attr("value", "test");
-    // });
-    chosenIDs = [];
-    $("input:checkbox").each(function(){
-      var $this = $(this);
-
-      if($this.is(":checked")){
-          chosenIDs.push($this.attr("class"));
-      }
+      var words = $(this).val().split(" ");
+      parsedCards.push(new Card([words[0],words[1],words[2],words[3]]));
+      chosenIDs.push($(this).attr("class"));
     });
     console.log(chosenIDs);
-
-    console.log(chosenCardIDs);
-    var parsedCards = [];
-    for (var i = 0; i < chosenCardIDs.length; i++) {
-      var split = chosenCardIDs[i].split(" ");
-      parsedCards.push(new Card([split[0],split[1],split[2],split[3]]));
-    }
     console.log(parsedCards);
 
+    //change cards if it is a set
     result = isSet(parsedCards);
     alert(result);
     if (result) {
@@ -116,10 +102,7 @@ $(document).ready(function() {
         console.log(newCard.getID());
         $("." + chosenIDs[i]).attr("value", newCard.getID());
         $("." + chosenIDs[i]).text(newCard.getID());
-        //cards.push(newDeck.getRandomCard());
       }
     }
-  })
-  //console.log(isSet(goodSet));
-  //console.log(cards);
+  });
 });
