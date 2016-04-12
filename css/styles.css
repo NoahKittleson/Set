@@ -1,6 +1,8 @@
+
 .body {
-  background-image: url(/Users/Guest/desktop/Set/img/beach.jpg);
-  background-repeat: no-repeat;
+  /*background-image: url(/Users/Guest/desktop/Set/img/beach.jpg);
+  background-repeat: no-repeat;*/
+  background-color: lightgray;
   border: 2px solid lightblue;
   border-radius: 20px;
 }
@@ -15,19 +17,26 @@
     font-size: 6em;
     }
 
+/*card styles--------------------------*/
 .size {
   min-height: 200px;
   max-width: 280px;
   background-color: lightpink;
   border-radius: 20px;
-  margin: 5px;
+  margin: 8px;
     opacity: 0.8;
 }
 
 .move {
-  padding-left: 13.25%;
+  padding-left: 13.5%;
+  padding-right: 13.5%;
 }
 
+.container {
+  min-width: 70%;
+}
+
+/*button styles-------------------------*/
 .play {
   text-align: center;
   min-width: 150px;
@@ -40,4 +49,27 @@
 }
 .rules {
   text-align: center;
+}
+#modal-rules {
+  margin-bottom: 15px;
+}
+
+/*Modal Styles_-------------------------*/
+.video {
+  padding-right: 10%;
+  padding-top: 2%;
+}
+.modal-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+.modal-body p {
+  font-size: 16px;
+}
+.modal-body li {
+  font-size: 16px;
+}
+#title {
+  font-size: 20px;
 }
