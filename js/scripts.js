@@ -1,25 +1,12 @@
-var properties = [["red", "purple", "green"], ["squigly", "diamond", "pill"], [ 1, 2, 3], ["empty", "crosshatch", "full"]];
+var properties = [["red", "purple", "green"], ["squigly", "diamond", "pill"], [1, 2, 3], ["empty", "crosshatch", "full"]];
 var cards = [];
 
 function Card (propertyArray) {
   this.properties = propertyArray;
 }
 
-Card.prototype.getID = function() {
-  var string = "";
-  this.properties.forEach(function(property) {
-    string = string.concat(property + " ");
-  });
-  return string;
-}
-
-function shuffle(array) {
-  var oldSpot, newSpot;
-  for (var i = 0; i < array.length; i++) {
-    var rand = Math.floor(Math.random() * i);
-    oldSpot = array[i-1];
-    array[i]
-  }
+function Deck () {
+  this.cards = createDeck();
 }
 
 function createDeck() {
@@ -36,6 +23,25 @@ function createDeck() {
   return deck;
 }
 
+Deck.prototype.printDeck = function() {
+  for (var i = 0; i < this.cards.length; i++) {
+    console.log(this.cards[i].getID());
+  }
+}
+
+Deck.prototype.getRandomCard = function() {
+  var rand = Math.floor(Math.random() * 1000);
+  rand = rand % this.cards.length;
+  return this.cards[rand];
+}
+
+Card.prototype.getID = function() {
+  var string = "";
+  this.properties.forEach(function(property) {
+    string = string.concat(property + " ");
+  });
+  return string;
+}
 
 function isSet(cardArray) {
   //return true or false if it is in a set
@@ -49,7 +55,7 @@ function isSet(cardArray) {
   return bool;
 }
 
-function getRandomCard() {
+function generateRandomCard() {
   var cardProperties = [];
   for (var i = 0; i < properties.length; i++) {
     var rand = Math.floor(Math.random() * 100);
@@ -61,11 +67,10 @@ function getRandomCard() {
 }
 
 $(document).ready(function() {
+  var newDeck = new Deck();
   for (var i = 0; i < 12; i++) {
-    cards.push(getRandomCard());
+    cards.push(newDeck.getRandomCard());
   }
-  console.log(createDeck());
-  //console.log(cards[0].getID(););
 
   goodSet =[];
   goodSet.push(new Card(["red","squigly", 1, "emptty"]));
