@@ -21,6 +21,22 @@
 .body {
   background-color: #E6E6E6;
 }
+.initial-display {
+  text-align: center;
+  border-radius: 20px;
+  background-color: #99e6e6;
+  border: 3px solid #32cdcd;
+  box-shadow: white 1px 1px 3px 3px;
+  font-family: 'Dosis', sans-serif;
+  color: black;
+
+}
+#start {
+  margin: 20px;
+  min-width: 200px;
+  background-color: transparent;
+  box-shadow: 1px 1px 3px 3px;
+}
 
 
 /*button styles-------------------------*/
@@ -88,6 +104,9 @@
   opacity: 0.8;
   display: block;
 }
+.initial-hide {
+  display: none;
+}
 
 .cardStyle {
   max-width:100%;
@@ -110,8 +129,6 @@ input[type=checkbox] {
 .col-xs-15{
     width:20%;
 }
-
-
 
 
 /*Rules------------------*/
@@ -160,6 +177,8 @@ input[type=checkbox] {
   color: white;
   font-weight: bold;
 }
+
+}
 #resume {
   background-color: black;
 }
@@ -191,10 +210,10 @@ input[type=checkbox] {
   color: green;
 }
 .info{
-  background-color: #339966;
+  background-color: #ffcc99;
 }
 .info-body {
-  background-color: #eafaea;
+  background-color: #ffe6cc;
 }
 .modal-body li {
   font-size: 16px;

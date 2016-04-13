@@ -18,14 +18,17 @@ $(document).ready(function(event) {
   });
 
 
-  clock = $('.clock').FlipClock(61, {
+  clock = $('.clock').FlipClock(60, {
       clockFace: 'MinuteCounter',
       countdown: true,
       autoStart: false,
   });
 
-	$('#start').click(function(e) {
+	$('#start').click(function() {
 		  clock.start();
+      $(".hidden-row").hide();
+      $(".initial-hide").show();
+
     });
 
   $('#pause').click(function() {
