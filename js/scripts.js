@@ -26,8 +26,8 @@ function createDeck() {
 }
 
 Deck.prototype.shuffle = function() {
-  var oldCopy = this.cards[0];
-  var newCopy = this.cards[0];
+  var oldCopy = this.cards.pop();
+  var newCopy;
   for (var i = 0; i < this.cards.length * 2; i++) {
     var rand = Math.floor(Math.random() * 1000);
     rand = rand % this.cards.length;
@@ -35,6 +35,7 @@ Deck.prototype.shuffle = function() {
     this.cards[rand] = oldCopy;
     oldCopy = newCopy;
   }
+  this.cards.push(oldCopy);
 }
 
 Deck.prototype.printDeck = function() {
@@ -124,7 +125,9 @@ $(document).ready(function() {
           str = str.substring(0, str.length-1);
           $("." + chosenIDs[i]).attr("src", "img/" + str + ".png");
         } else {
-          alert("out of cards");
+          $("." + chosenIDs[i]).each(function() {
+            $(this).replaceWith("");
+          });
         }
       }
     } else {
