@@ -3,4 +3,7 @@
     max-width: 150px;
     max-height: 100px;
   }
+  #resumeImg {
+    max-width: 250px;
+  }
 }
