@@ -1,22 +1,25 @@
+.navigation {
+  background-color: #808685;
+}
 
-.header {
-  background-color: #D1F9F7;
-  border-radius: 20px;
-  border: 2px solid #118781;
-  }
-  .header h1 {
-    text-align: center;
-    font-size: 6em;
-    }
+.navigation h3{
+  font-family: sans-serif;
+  font-weight:100;
+  font-size: 1.6em;
+  color: white;
+  text-align: center;
+  padding-top: -3px;
+  letter-spacing: 2px;
+}
+
+.logo {
+  background-color: #4F5755;
+}
 
 
 /*Body----------------------------------*/
 .body {
-  /*background-image: url(/Users/Guest/desktop/Set/img/beach.jpg);
-  background-repeat: no-repeat;*/
-  background-color: lightgray;
-  border: 2px solid lightblue;
-  border-radius: 20px;
+  background-color: #E6E6E6;
 }
 
 
@@ -78,26 +81,37 @@
 
 /*card styles--------------------------*/
 .size {
-  min-height: 150px;
-  max-width: 220px;
-  background-color: lightpink;
-  border-radius: 20px;
-  margin: 8px;
-  margin-left: 21.5px;
-  margin-right: 21.5px;
+  min-width: 250px;
+  margin: 10px;
+  margin-left: -15px;
+  margin-right: -15px;
   opacity: 0.8;
-  box-shadow: 3px 3px 5px 5px #666699;
   display: block;
 }
 
-.move {
-  padding-left: 5%;
-  padding-right: 5%;
+.cardStyle {
+  max-width:100%;
+  min-width:50%
 }
+
 
 .middle {
   border: 4px solid darkgray;
 }
+
+input[type=checkbox] {
+    display:none;
+}
+
+.board {
+ padding-top: 10px;
+}
+
+.col-xs-15{
+    width:20%;
+}
+
+
 
 
 /*Rules------------------*/
