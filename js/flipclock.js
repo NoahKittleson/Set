@@ -522,6 +522,7 @@ var FlipClock;
 			if(this.factory.time.getTimeSeconds() == 0) {
 	        	this.factory.stop()
 						$("#gameOverModal").modal('show');
+						$(".final-score").text(score);
 			}
 			else {
 				this.factory.time.subSecond();
