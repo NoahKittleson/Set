@@ -1,19 +1,19 @@
+/*div {
+  border: 1px solid black;
+}*/
+
 .navigation {
   background-color: #808685;
 }
 
 .navigation h3{
   font-family: sans-serif;
-  font-weight:100;
-  font-size: 1.6em;
-  color: white;
+  font-weight:400;
+  font-size: 1.5em;
+  color: #4F5755;
   text-align: center;
   padding-top: -3px;
   letter-spacing: 2px;
-}
-
-.logo {
-  background-color: #4F5755;
 }
 
 
@@ -104,13 +104,35 @@ input[type=checkbox] {
 }
 
 .board {
- padding-top: 10px;
+ padding-top: 20px;
+ /*float: center;*/
 }
 
-.col-xs-15{
-    width:20%;
+.selectInterface {
+ padding-top: 20px;
+ background-color: black;
+ width: 143px;
+ /*float: center;*/
 }
 
+.setInterfaceStyle {
+  width: 200px!important;
+}
+
+#lastRow {
+
+  margin-left: 20px
+}
+
+/*.testClass img   {
+  width: 200px!important;
+}*/
+
+.setInterfaceBackground {
+  background-color: white;
+  min-height: 200px;
+  min-width: 100%;
+}
 
 
 
@@ -118,7 +140,17 @@ input[type=checkbox] {
 
 .rules {
   text-align: center;
+  color: white;
+  margin-top: 8px;
+  float: right;
+  padding-right: 15px;
+  font-size: 1.2em;
+  font-weight: lighter;
+  letter-spacing: 1.2px;
+  /*border-bottom: 1px solid white;
+  padding-bottom: 2px;*/
 }
+
 #modal-rules {
   margin-bottom: 15px;
 }
