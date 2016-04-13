@@ -7,26 +7,41 @@ $(document).ready(function(event) {
   $("#modal-rules").click(function(event) {
     $('#myModal').modal('show');
   });
+
+
+  $("#GOreplay").click(function()  {
+    window.location.reload()
+  });
+
   $("#double-set").click(function() {
     $("#hidden-ds").fadeIn();
   });
 
-  clock = $('.clock').FlipClock(60, {
-  		        clockFace: 'MinuteCounter',
-  		        countdown: true,
-  		        autoStart: false,
 
-  		    });
+  clock = $('.clock').FlipClock(61, {
+      clockFace: 'MinuteCounter',
+      countdown: true,
+      autoStart: false,
+  });
 
-  		    $('#start').click(function(e) {
+	$('#start').click(function(e) {
+		  clock.start();
+    });
 
-  		    	clock.start();
-            function pauseTimer() {
-                  value = timer.textContent;
-                  clearTimeout(id);
-              }
-            pause.addEventListener("click", pauseTimer, false);
-  		    });
+  $('#pause').click(function() {
+    $("#pauseModal").modal('show');
+		  clock.stop();
+
+    });
+
+  $('#resume').click(function(e) {
+		  clock.start();
+    });
+
+
+  $("#replay").click(function()  {
+    window.location.reload()
+  });
 
 
 
