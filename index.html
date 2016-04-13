@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/flipclock.css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <!-- <link href="css/responsive.css" rel="stylesheet" type="text/css"> -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css"><link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dosis:800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
     <script src="js/jquery-1.12.3.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
@@ -26,16 +27,13 @@
 
         </div>
       </div>
-
     </div>
 
     <div class="container-fluid body">
       <div class="row">
-        <div class="col-xs-2">
+        <div class="col-xs-2 score">
           <h3>Score:</h3>
-
           <span id="score">0</span>
-
         </div>
       </div>
 
@@ -44,18 +42,29 @@
           <div class="clock" ></div>
           	<div class="message"></div><br>
           <!-- <h4 class="timer countDown" id="timer">00:00</h4> -->
-          <div class="row button-row">
-            <button type="button"  id="start" class="btn btn-default time-btn" name="button">Play</button>
+          <div class="row button-row initial-hide">
+            <!-- <button type="button"  id="start" class="btn btn-default time-btn" name="button">Play</button> -->
             <button type="button"  id="pause" class="btn btn-default time-btn" name="button">Pause</button>
             <!-- <button type="button"  id="resume" class="btn btn-default time-btn" name="button">Resume</button> -->
           </div>
         </div>
       </div>
 
+  <!--Initial Display---------------->
+      <div class="row hidden-row">
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-4  initial-display">
+          <h1>To begin playing click here:</h1>
+          <button type="button" id="start" name="button"><img src="img/play.png" alt="play button"/></button>
+        </div>
+        <div class="col-xs-4">
+        </div>
+      </div>
 
 
 <!--Hidden Double Set ----------------->
-      <button type="button" class="btn btn-default double-set" id="double-set" name="button">Double Set</button>
+      <button type="button" class="btn btn-default double-set initial-hide" id="double-set" name="button">Double Set</button>
       <br></br>
 
       <div id="hidden-ds">
@@ -79,7 +88,7 @@
       </div>
 
 <!--Cards------------------------------->
-      <div class="container-fluid">
+      <div class="container initial-hide">
       <div class="board">
         <form class="" action="index.html" method="post">
 
@@ -207,12 +216,7 @@
           </div>
           </div>
       </div>
-
-
-
-
           <br></br>
-
 
           <div class="row button-row">
 
@@ -222,11 +226,17 @@
           </div>
           <br></br>
 
-          <div class="row rules">
-            <button type="button" class="btn btn-default rules" id="modal-rules" name="button">Rules</button>
+          <!-- <div class="row rules">
+            <button type="button" class="btn btn-default rules" id="modal-rules" name="button">Rules</button> -->
 
-          </div>
+          <!-- </div> -->
         </form>
+      </div>
+      <div class="container-fluid">
+        <div class="row rules">
+          <button type="button" class="btn btn-default rules" id="modal-rules" name="button">Rules</button>
+        </div>
+
       </div>
 
 <!-- Modal -->
@@ -261,7 +271,7 @@
               </div>
             </div>
             <div class="modal-footer info">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" id="close-btn" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
@@ -278,6 +288,10 @@
             <div class="modal-body">
               <div class="GOcontainer">
                 <img id="GOimg" src="img/game-over.gif" alt="Game Over" />
+                <h2>Your Final Score is:</h2>
+                <ul class="final-score">
+
+                </ul>
               </div>
             </div>
             <div class="GOmodal-footer">
@@ -296,7 +310,7 @@
             <div class="modal-body">
               <div class="pauseContainer">
                 <h1>Click button to</h1>
-                <button type="button" id="resume" class="btn" data-dismiss="modal"><img id="resumeImg" src="img/pause.png" alt="Pause" /></button>
+                <button type="button" id="resume" class="btn" data-dismiss="modal"><img id="resumeImg" src="img/play2.png" alt="Pause" /></button>
                 <h1>Resume</h1>
               </div>
             </div>

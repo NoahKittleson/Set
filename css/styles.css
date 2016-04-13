@@ -22,6 +22,32 @@
   background-color: #E6E6E6;
 }
 
+.score h3 {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 3em;
+}
+#score {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 2em;
+  padding-left: 15%;
+}
+.initial-display {
+  text-align: center;
+  border-radius: 20px;
+  background-color: #99e6e6;
+  border: 3px solid #32cdcd;
+  box-shadow: white 1px 1px 3px 3px;
+  font-family: 'Cabin Sketch', cursive;
+  color: black;
+
+}
+#start {
+  margin: 20px;
+  min-width: 200px;
+  background-color: transparent;
+  box-shadow: 1px 1px 3px 3px;
+}
+
 
 /*button styles-------------------------*/
 .play {
@@ -30,7 +56,7 @@
   max-height: 80px;
   margin-left: 10px;
   margin-right: 10px;
-  box-shadow: 1px 1px 3px 3px;
+  box-shadow: 2px 2px 3px 3px;
 }
 
 .clock {
@@ -46,6 +72,7 @@
   margin-left: 10px;
   margin-right: 10px;
   box-shadow: 1px 1px 2px 2px;
+  font-family: 'Cabin Sketch', cursive;
 }
 /*.timer {
   text-align: center;
@@ -77,9 +104,16 @@
 .double-set {
   float: right;
   margin-right: 2%;
+  font-family: 'Cabin Sketch', cursive;
 }
 
 /*card styles--------------------------*/
+.board {
+  background-color: #c2d1f0;
+  border-radius: 20px;
+  padding: 20px;
+}
+
 .size {
   min-width: 250px;
   margin: 10px;
@@ -87,6 +121,9 @@
   margin-right: -15px;
   opacity: 0.8;
   display: block;
+}
+.initial-hide {
+  display: none;
 }
 
 .cardStyle {
@@ -112,8 +149,6 @@ input[type=checkbox] {
 }
 
 
-
-
 /*Rules------------------*/
 
 .rules {
@@ -121,6 +156,8 @@ input[type=checkbox] {
 }
 #modal-rules {
   margin-bottom: 15px;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 2em;
 }
 .GOcontainer {
   text-align: center;
@@ -153,12 +190,15 @@ input[type=checkbox] {
 }
 .pauseModal-content {
   background-color: black;
+  font-family: 'Cabin Sketch', cursive;
 }
 .pauseModal-content h1 {
   margin: 30px;
   font-size: 5em;
   color: white;
   font-weight: bold;
+}
+
 }
 #resume {
   background-color: black;
@@ -174,9 +214,9 @@ input[type=checkbox] {
   text-align: center;
   font-size: 3em;
   font-weight: bold;
-  font-family: volkorn;
   color: white;
   text-shadow: 2px -5px 8px black;
+  font-family: 'Cabin Sketch', cursive;
 }
 .modal-body p {
   font-size: 16px;
@@ -191,10 +231,16 @@ input[type=checkbox] {
   color: green;
 }
 .info{
-  background-color: #339966;
+  background-color: #ffcc99;
+  font-family: 'Cabin Sketch', cursive;
+}
+#close-btn {
+  background-color: #ffe6cc;
+  color: #black;
+
 }
 .info-body {
-  background-color: #eafaea;
+  background-color: #ffe6cc;
 }
 .modal-body li {
   font-size: 16px;
