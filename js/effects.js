@@ -8,6 +8,7 @@ $(document).ready(function(event) {
     $('#myModal').modal('show');
   });
 
+
   $("#GOreplay").click(function()  {
     window.location.reload()
   });
