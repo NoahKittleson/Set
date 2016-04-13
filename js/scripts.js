@@ -7,8 +7,8 @@ function Card (propertyArray) {
 }
 
 function Deck () {
-  this.cards = createDeck();
-  this.shuffle();
+  this.cards = shuffle(createDeck()).concat(shuffle(createDeck()));
+  //this.shuffle();
 }
 
 function createDeck() {
@@ -25,17 +25,18 @@ function createDeck() {
   return deck;
 }
 
-Deck.prototype.shuffle = function() {
-  var oldCopy = this.cards.pop();
+function shuffle (array) {
+  var oldCopy = array.pop();
   var newCopy;
-  for (var i = 0; i < this.cards.length * 2; i++) {
+  for (var i = 0; i < array.length * 2; i++) {
     var rand = Math.floor(Math.random() * 1000);
-    rand = rand % this.cards.length;
-    newCopy = this.cards[rand];
-    this.cards[rand] = oldCopy;
+    rand = rand % array.length;
+    newCopy = array[rand];
+    array[rand] = oldCopy;
     oldCopy = newCopy;
   }
-  this.cards.push(oldCopy);
+  array.push(oldCopy);
+  return array;
 }
 
 Deck.prototype.printDeck = function() {
@@ -85,7 +86,7 @@ function isDoubleSet(cardArray) {
 $(document).ready(function() {
   var newDeck = new Deck();
   var cardIDArray = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "card11", "card12", "card13", "card14", "card15", "card16", "card17", "card18", "card19", "card20"];
-  var newCard
+  var newCard;
   for (var i = 0; i < cardIDArray.length; i++) {
     newCard = newDeck.getNextCard();
     console.log(newCard.getID());
