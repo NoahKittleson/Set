@@ -1,0 +1,6 @@
+@media screen and (max-width: 1184px) {
+  .size {
+    max-width: 150px;
+    max-height: 100px;
+  }
+}
