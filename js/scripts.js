@@ -6,7 +6,8 @@ function Card (propertyArray) {
 }
 
 function Deck () {
-  this.cards = createDeck();
+  this.cards = createDeck().concat(createDeck());
+  this.shuffle();
 }
 
 function createDeck() {
@@ -23,17 +24,30 @@ function createDeck() {
   return deck;
 }
 
+Deck.prototype.shuffle = function() {
+  var oldCopy = this.cards[0];
+  var newCopy = this.cards[0];
+  for (var i = 0; i < this.cards.length * 2; i++) {
+    var rand = Math.floor(Math.random() * 1000);
+    rand = rand % this.cards.length;
+    newCopy = this.cards[rand];
+    this.cards[rand] = oldCopy;
+    oldCopy = newCopy;
+  }
+}
+
 Deck.prototype.printDeck = function() {
   for (var i = 0; i < this.cards.length; i++) {
     console.log(this.cards[i].getID());
   }
 }
 
-Deck.prototype.getRandomCard = function() {
-  var rand = Math.floor(Math.random() * 1000);
-  rand = rand % this.cards.length;
-  var randomCard = this.cards.splice(rand,1);
-  return randomCard[0];
+Deck.prototype.getNextCard = function() {
+  return this.cards.pop();
+  // var rand = Math.floor(Math.random() * 1000);
+  // rand = rand % this.cards.length;
+  // var randomCard = this.cards.splice(rand,1);
+  // return randomCard[0];
 }
 
 Card.prototype.getID = function() {
@@ -56,29 +70,42 @@ function isSet(cardArray) {
   return bool;
 }
 
-function generateRandomCard() {
-  var cardProperties = [];
+
+function isDoubleSet(cardArray) {
+  var bool = true;
   for (var i = 0; i < properties.length; i++) {
-    var rand = Math.floor(Math.random() * 100);
-    rand = rand % 3;
-    cardProperties.push(properties[i][rand]);
+    if ((cardArray[2].properties[i] === cardArray[3].properties[i] && cardArray[3].properties[i] === cardArray[4].properties[i]) || cardArray[2].properties[i] !== cardArray[3].properties[i] && cardArray[3].properties[i] !== cardArray[4].properties[i] && cardArray[2].properties[i] !== cardArray[4].properties[i]) {
+    } else {
+      bool = false;
+    }
   }
-  var newCard = new Card (cardProperties);
-  return newCard;
+  if (isSet(cardArray)) {
+    return bool;
+  }
 }
+
+// function generateRandomCard() {
+//   var cardProperties = [];
+//   for (var i = 0; i < properties.length; i++) {
+//     var rand = Math.floor(Math.random() * 100);
+//     rand = rand % 3;
+//     cardProperties.push(properties[i][rand]);
+//   }
+//   var newCard = new Card (cardProperties);
+//   return newCard;
+// }
 
 $(document).ready(function() {
   var newDeck = new Deck();
-  var cardIDArray = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "card11", "card12"];
+  var cardIDArray = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "card11", "card12", "card13", "card14", "card15", "card16", "card17", "card18", "card19", "card20"];
   var newCard
   for (var i = 0; i < cardIDArray.length; i++) {
-    newCard = newDeck.getRandomCard();
+    newCard = newDeck.getNextCard();
     console.log(newCard.getID());
     $("." + cardIDArray[i]).attr("value", newCard.getID());
     str = newCard.getID();
     str = str.substring(0, str.length-1);
     $("." + cardIDArray[i]).attr("src", "img/" + str + ".png");
-    //cards.push(newDeck.getRandomCard());
   }
 
 
@@ -101,7 +128,7 @@ $(document).ready(function() {
     alert(result);
     if (result) {
       for (var i = 0; i < chosenIDs.length; i++) {
-        newCard = newDeck.getRandomCard();
+        newCard = newDeck.getNextCard();
         console.log(newCard.getID());
         $("." + chosenIDs[i]).attr("value", newCard.getID());
         $("." + chosenIDs[i]).text(newCard.getID());
