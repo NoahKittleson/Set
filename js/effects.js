@@ -18,7 +18,7 @@ $(document).ready(function(event) {
   });
 
 
-  clock = $('.clock').FlipClock(60, {
+  clock = $('.clock').FlipClock(61, {
       clockFace: 'MinuteCounter',
       countdown: true,
       autoStart: false,
@@ -26,13 +26,18 @@ $(document).ready(function(event) {
 
 	$('#start').click(function(e) {
 		  clock.start();
-      function pauseTimer() {
-      value = timer.textContent;
-      clearTimeout(id);
-      }
+    });
 
-          pause.addEventListener("click", pauseTimer, false);
-		    });
+  $('#pause').click(function() {
+    $("#pauseModal").modal('show');
+		  clock.stop();
+
+    });
+
+  $('#resume').click(function(e) {
+		  clock.start();
+    });
+
 
   $("#replay").click(function()  {
     window.location.reload()
