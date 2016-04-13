@@ -46,6 +46,7 @@ Card.prototype.getID = function() {
 
 function isSet(cardArray) {
   //return true or false if it is in a set
+  debugger;
   var bool = true;
   for (var i = 0; i < properties.length; i++) {
     if ((cardArray[0].properties[i] === cardArray[1].properties[i] && cardArray[1].properties[i] === cardArray[2].properties[i] ) || cardArray[0].properties[i] !== cardArray[1].properties[i] && cardArray[1].properties[i] !== cardArray[2].properties[i] && cardArray[0].properties[i] !== cardArray[2].properties[i]) {
@@ -69,7 +70,7 @@ function generateRandomCard() {
 
 $(document).ready(function() {
   var newDeck = new Deck();
-  var cardIDArray = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "card11", "card12"];
+  var cardIDArray = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "card11", "card12", "card13", "card14", "card15", "card16", "card17", "card18", "card19", "card20"];
   var newCard
   for (var i = 0; i < cardIDArray.length; i++) {
     newCard = newDeck.getRandomCard();
