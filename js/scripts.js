@@ -153,6 +153,9 @@ $(document).ready(function() {
 
     //change cards if it is a set
     if (result) {
+      if (chosenIDs.length === 5) {
+        score += 4;
+      }
       score++;
       // $('.clock').FlipClock(reset);
       $("#score").text(score);
