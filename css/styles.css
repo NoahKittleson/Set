@@ -143,6 +143,10 @@
   min-width:50%
 }
 
+.cardShadow {
+  box-shadow: 3px 3px 5px 5px #e97c7c;
+}
+
 
 .middle {
   border: 4px solid darkgray;

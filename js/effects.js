@@ -47,9 +47,15 @@ $(document).ready(function(event) {
 		  clock.start();
     });
 
-
   $("#replay").click(function()  {
     window.location.reload()
   });
 
+  $(".cardStyle").click(function() {
+    $(this).addClass("cardShadow");
+  });
+
+  $("#submit").click(function() {
+    $(".cardStyle").removeClass("cardShadow");
+  });
 });
