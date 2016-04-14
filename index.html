@@ -46,6 +46,7 @@
         </div>
         <div class="col-xs-2 rules">
           <button type="button" class="btn btn-default rules" id="modal-rules" name="button">Rules</button>
+          <button type="button" class="btn btn-default rules initial-hide" id="modal-rules2" name="button">Rules</button>
         </div>
       </div>
     </div>
@@ -224,10 +225,16 @@
 <!-- <!- Rule Modal -->
       <div id="myModal" data-backdrop="static" data-keyboard="false" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+
           <!-- Modal content-->
           <div class="modal-content">
             <div class="modal-header info">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">Rules of Set</h4>
             </div>
             <div class="modal-body info-body">
@@ -243,7 +250,7 @@
                          <li><strong>Shading:</strong> solid, striped, outlined</li>
 
                        </ul>
-                       <p>A <em>SET</em> consists of 3 cards in which each of the cards' features, looked at one-by-one, are the same on each card, or, are different on each card. All of the features must seperately satisfy this rule. In other words: shape must be either the same on all 3 cards, or different on each othe 3 cards; color must be either the same on all 3 cards, or different on each othe 3, etc.
+                       <p>A <em>SET</em> consists of 3 cards in which each of the cards' features, looked at one-by-one, are the same on each card, or, are different on each card. All of the features must seperately satisfy this rule. In other words: shape must be either the same on all 3 cards, or different on each of the 3 cards; color must be either the same on all 3 cards, or different on each of the 3, etc.
                        </p>
                      </div>
                      <div class="col-sm-8">
@@ -259,6 +266,53 @@
         </div>
       </div>
 <!-- END OF MODAL -->
+<!-- <!- Rule 2 Modal -->
+      <div id="myModal2" data-backdrop="static" data-keyboard="false" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header info">
+              <h4 class="modal-title">Rules of Set</h4>
+            </div>
+            <div class="modal-body info-body">
+              <p id="title"><strong>Instructions</strong></p>
+              <div class="container">
+                 <div class="row">
+                     <div class="col-sm-4">
+                       <p>The object of the game is to identify a SET of 3 cards from 12 cards placed face up. Each card has four features, which can vary as follows:</p>
+                       <ul class="features">
+                         <li><strong>Shape:</strong> ovals, squiggles, diamonds</li>
+                         <li><strong>Color: </strong><span class="red">red</span>, <span class="purple">purple</span>, <span class="green">green</span></li>
+                         <li><strong>Number:</strong> one, two, three</li>
+                         <li><strong>Shading:</strong> solid, striped, outlined</li>
+
+                       </ul>
+                       <p>A <em>SET</em> consists of 3 cards in which each of the cards' features, looked at one-by-one, are the same on each card, or, are different on each card. All of the features must seperately satisfy this rule. In other words: shape must be either the same on all 3 cards, or different on each of the 3 cards; color must be either the same on all 3 cards, or different on each of the 3, etc.
+                       </p>
+                     </div>
+                     <div class="col-sm-8">
+                        <iframe class="col-lg-8 col-xs-8 video" height="333"  src="https://www.youtube.com/embed/Kc4WrL7cxeg" frameborder="0" allowfullscreen></iframe>
+                     </div>
+                 </div>
+              </div>
+            </div>
+            <div class="modal-footer info">
+              <button type="button" id="end-btn" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- END OF MODAL -->
+
+
+
 <!--GAME OVER MODAL  -->
       <div id="gameOverModal" data-backdrop="static" data-keyboard="false" class="modal fade" role="dialog">
         <div class="modal-dialog modal-md">

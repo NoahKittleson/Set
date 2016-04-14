@@ -7,13 +7,24 @@ $(document).ready(function(event) {
 
   $("#modal-rules").click(function(event) {
     $('#myModal').modal('show');
-    clock.stop();
+    // clock.stop();
   });
 
   $("#close-btn").click(function(event) {
     $('#myModal').modal('show');
+    // clock.start();
+  });
+
+  $("#modal-rules2").click(function(event) {
+    $('#myModal2').modal('show');
+    clock.stop();
+  });
+
+  $("#end-btn").click(function(event) {
+    $('#myModal2').modal('show');
     clock.start();
   });
+
 
 
   $("#GOreplay").click(function()  {
@@ -33,8 +44,10 @@ $(document).ready(function(event) {
 
 	$('#start').click(function() {
 		  clock.start();
+      $('#modal-rules').hide();
       $(".hidden-row").hide();
       $(".initial-hide").show();
+      $("#modal-rules2").show();
 
     });
 

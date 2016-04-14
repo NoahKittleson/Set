@@ -176,6 +176,11 @@ input[type=checkbox] {
   font-family: 'Cabin Sketch', cursive;
   font-size: 2em;
 }
+#modal-rules2 {
+  margin-bottom: 15px;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 2em;
+}
 .GOcontainer {
   text-align: center;
 }
@@ -273,8 +278,8 @@ body.modal-open .blur{
 #close-btn {
   background-color: #ffe6cc;
   color: #black;
-
 }
+
 .info-body {
   background-color: #ffe6cc;
 }
@@ -287,3 +292,32 @@ body.modal-open .blur{
 
 
 /*88888888888888888*/
+
+
+
+.rules-header {
+  text-align: center;
+  font-size: 5em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px -5px 8px black;
+  font-family: 'Cabin Sketch', cursive;
+  background-color: #ffcc99;
+  margin-top: 20px;
+}
+
+.rules-body {
+  background-color: #ffe6cc;
+  padding: 20px;
+}
+.rules-body p {
+font-size: 20px;
+}
+.rules-body ul {
+font-size: 20px;
+}
+
+.video {
+  margin-bottom: 20px;
+  text-align: center;
+}
