@@ -71,6 +71,18 @@ function isSet(cardArray) {
 
 
 function isDoubleSet(cardArray) {
+  debugger;
+  var setOne = cardArray.slice(0,3);
+  var setTwo = cardArray.slice(2,5);
+  console.log(setOne);
+  console.log(setTwo);
+  var possibleSets = [[0,1,2], [0,1,3], [0,2,3], [1,2,3], [0,1,4], [0,2,4], [1,2,4], [0,3,4], [1,3,4], [2,3,4]];
+  if (isSet(setOne) && isSet(setTwo)) {
+    return true;
+  } else {
+    return false;
+  }
+
   var bool = true;
   for (var i = 0; i < properties.length; i++) {
     if ((cardArray[2].properties[i] === cardArray[3].properties[i] && cardArray[3].properties[i] === cardArray[4].properties[i]) || cardArray[2].properties[i] !== cardArray[3].properties[i] && cardArray[3].properties[i] !== cardArray[4].properties[i] && cardArray[2].properties[i] !== cardArray[4].properties[i]) {
@@ -90,7 +102,8 @@ function doubleSetTwoPointOh(cardArray) {
   sets = 0;
   var possibleSets = [[0,1,2], [0,1,3], [0,2,3], [1,2,3], [0,1,4], [0,2,4], [1,2,4], [0,3,4], [1,3,4], [2,3,4]];
   for (var i = 0; i < possibleSets.length; i++) {
-    var combo = [possibleSets[0], possibleSets[1], possibleSets[2]];
+    var combo = [cardArray[possibleSets[i][0]], cardArray[possibleSets[i][1]], cardArray[possibleSets[i][2]]];
+    console.log(combo);
     if (isSet(combo)) {
       sets++;
     }
@@ -103,10 +116,6 @@ function doubleSetTwoPointOh(cardArray) {
 }
 
 $(document).ready(function() {
-  // $.getScript("flipclock.js", function() {
-  //   console.log("loaded flipclock in scripts.js");
-  // })
-
   var newDeck = new Deck();
   var cardIDArray = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "card11", "card12", "card13", "card14", "card15", "card16", "card17", "card18", "card19", "card20"];
   var newCard;
@@ -135,10 +144,19 @@ $(document).ready(function() {
     console.log(chosenIDs);
     console.log(parsedCards);
 
+
+    var result = false;
+    if (chosenIDs.length === 3) {
+      result = isSet(parsedCards);
+    } else if (chosenIDs.length === 5) {
+      result = doubleSetTwoPointOh(parsedCards);
+    }
+    alert(result);
     //change cards if it is a set
-    result = isSet(parsedCards);
+    //result = isSet(parsedCards);
     if (result) {
       score++;
+      // $('.clock').FlipClock(reset);
       $("#score").text(score);
       for (var i = 0; i < chosenIDs.length; i++) {
         if (newDeck.cards.length) {

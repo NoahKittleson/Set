@@ -36,7 +36,7 @@ $(document).ready(function(event) {
   });
 
 
-  clock = $('.clock').FlipClock(3, {
+  clock = $('.clock').FlipClock(600, {
       clockFace: 'MinuteCounter',
       countdown: true,
       autoStart: false,
