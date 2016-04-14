@@ -103,7 +103,6 @@ function doubleSetTwoPointOh(cardArray) {
   var possibleSets = [[0,1,2], [0,1,3], [0,2,3], [1,2,3], [0,1,4], [0,2,4], [1,2,4], [0,3,4], [1,3,4], [2,3,4]];
   for (var i = 0; i < possibleSets.length; i++) {
     var combo = [cardArray[possibleSets[i][0]], cardArray[possibleSets[i][1]], cardArray[possibleSets[i][2]]];
-    console.log(combo);
     if (isSet(combo)) {
       sets++;
     }
@@ -144,16 +143,15 @@ $(document).ready(function() {
     console.log(chosenIDs);
     console.log(parsedCards);
 
-
+    //determine if it's a set
     var result = false;
     if (chosenIDs.length === 3) {
       result = isSet(parsedCards);
     } else if (chosenIDs.length === 5) {
       result = doubleSetTwoPointOh(parsedCards);
     }
-    alert(result);
+
     //change cards if it is a set
-    //result = isSet(parsedCards);
     if (result) {
       score++;
       // $('.clock').FlipClock(reset);
@@ -176,7 +174,7 @@ $(document).ready(function() {
     } else {
       for (var i = 0; i < chosenIDs.length; i++) {
         $("." + chosenIDs[i]).effect("shake");
-      //   $("." + chosenIDs[i]).style.display = "block";
+        $('input[type=checkbox]').hide();
       }
     }
   });
