@@ -1,7 +1,3 @@
-/*div {
-  border: 1px solid black;
-}*/
-
 .navigation {
   background-color: #808685;
 }
@@ -20,17 +16,27 @@
 /*Body----------------------------------*/
 .body {
   background-color: #E6E6E6;
+  min-height: 980px;
 }
 
 
 /*button styles-------------------------*/
-.play {
+ h4 .play {
   text-align: center;
   max-width: 120px;
   max-height: 80px;
-  margin-left: 10px;
-  margin-right: 10px;
-  box-shadow: 1px 1px 3px 3px;
+  display: inline-block;
+  /*margin-left: 5%;
+  margin-right: 5%;*/
+  /*float: right;*/
+  /*position: relative;*/
+  /*margin-top: 300px;
+  margin: auto;*/
+}
+
+.button-row {
+  position: relative;
+  margin-top: 300px;
 }
 
 .clock {
@@ -47,12 +53,10 @@
   margin-right: 10px;
   box-shadow: 1px 1px 2px 2px;
 }
-/*.timer {
-  text-align: center;
+
+/*#submit {
+  margin: auto;
 }*/
-.button-row {
-  text-align: center;
-}
 
 /*Hidden cards-------------------------*/
 #hidden-ds {
@@ -87,6 +91,16 @@
   margin-right: -15px;
   opacity: 0.8;
   display: block;
+  /*padding-left: -100px;*/
+}
+
+.sizeInterface {
+  min-width: 250px;
+  margin-top: 20px;
+  margin-left: -20px;
+  margin-right: -175px;
+  opacity: 0.8;
+  display: block;
 }
 
 .cardStyle {
@@ -105,14 +119,6 @@ input[type=checkbox] {
 
 .board {
  padding-top: 20px;
- /*float: center;*/
-}
-
-.selectInterface {
- padding-top: 20px;
- background-color: black;
- width: 143px;
- /*float: center;*/
 }
 
 .setInterfaceStyle {
@@ -120,18 +126,20 @@ input[type=checkbox] {
 }
 
 #lastRow {
+  margin-left: 70px;
 
-  margin-left: 20px
 }
 
-/*.testClass img   {
-  width: 200px!important;
-}*/
 
 .setInterfaceBackground {
   background-color: white;
-  min-height: 200px;
-  min-width: 100%;
+  max-height: 250px;
+  padding-top: 10px;
+  padding-left: 25px;
+  margin-top: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 200%;
 }
 
 
