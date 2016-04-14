@@ -1,5 +1,6 @@
 
 var clock;
+
 var pause = document.getElementById("pause");
 $(document).ready(function(event) {
   event.preventDefault;
@@ -34,7 +35,6 @@ $(document).ready(function(event) {
   $('#pause').click(function() {
     $("#pauseModal").modal('show');
 		  clock.stop();
-
     });
 
   $('#resume').click(function(e) {

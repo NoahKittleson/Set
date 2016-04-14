@@ -17,42 +17,35 @@
     <title>Set</title>
   </head>
 
-  <body>
+  <body class="body">
     <div class="container-fluid navigation">
       <div class="row">
         <div class="col-xs-2 logo">
           <h3>DOUBLE SET</h3>
         </div>
         <div class="col-xs-10">
-
         </div>
       </div>
     </div>
 
     <div class="container-fluid body">
+      <br></br>
       <div class="row">
         <div class="col-xs-2 score">
           <h3>Score:</h3>
           <span id="score">0</span>
         </div>
-        <div class="col-xs-10 rules">
-          <button type="button" class="btn btn-default rules" id="modal-rules" name="button">Rules</button>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="clock" ></div>
-          	<div class="message"></div><br>
-          <!-- <h4 class="timer countDown" id="timer">00:00</h4> -->
-          <div class="row button-row initial-hide">
-            <!-- <button type="button"  id="start" class="btn btn-default time-btn" name="button">Play</button> -->
-            <button type="button"  id="pause" class="btn btn-default time-btn" name="button">Pause</button>
-            <!-- <button type="submit" id="submit" class="btn btn-default play" name="button">Submit</button> -->
-            <!-- <button type="button" id="replay" class="btn btn-default play" name="button"><img src = "img/reset.png"></button> -->
-            <!-- <button type="button"  id="resume" class="btn btn-default time-btn" name="button">Resume</button> -->
-
+        <div class="col-xs-8">
+          <div class="clock">
           </div>
+          <div class="message">
+          </div>
+          <div class="row button-row initial-hide">
+            <button type="button"  id="pause" class="btn btn-default time-btn" name="button">Pause</button>
+          </div>
+        </div>
+        <div class="col-xs-2 rules">
+          <button type="button" class="btn btn-default rules" id="modal-rules" name="button">Rules</button>
         </div>
       </div>
     </div>
@@ -72,7 +65,7 @@
 
 
 <!--Hidden Double Set ----------------->
-      <button type="button" class="btn btn-default double-set initial-hide" id="double-set" name="button">Double Set</button>
+      <!-- <button type="button" class="btn btn-default double-set initial-hide" id="double-set" name="button">Double Set</button> -->
       <br></br>
 
       <div id="hidden-ds">
@@ -96,7 +89,7 @@
       </div>
 
 <!--Cards------------------------------->
-      <div class="container initial-hide">
+      <div id="body" class="container initial-hide">
         <div class="board">
           <form class="" action="index.html" method="post">
             <div class="row move">
@@ -227,7 +220,7 @@
 
         </form>
       </div>
-    
+
 <!-- <!- Rule Modal -->
       <div id="myModal" data-backdrop="static" data-keyboard="false" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
@@ -299,7 +292,7 @@
             <div class="modal-body">
               <div class="pauseContainer">
                 <h1>Click button to</h1>
-                <button type="button" id="resume" class="btn" data-dismiss="modal"><img id="resumeImg" src="img/play2.png" alt="Pause" /></button>
+                <button type="button" id="resume"  class="btn" data-dismiss="modal"><img id="resumeImg" src="img/play2.png" alt="Pause" /></button>
                 <h1>Resume</h1>
               </div>
             </div>
