@@ -156,7 +156,10 @@ $(document).ready(function() {
         }
       }
     } else {
-      alert("Sorry, not a set");
+      for (var i = 0; i < chosenIDs.length; i++) {
+        $("." + chosenIDs[i]).effect("shake");
+      //   $("." + chosenIDs[i]).style.display = "block";
+      }
     }
   });
 });
