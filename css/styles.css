@@ -19,7 +19,8 @@
 
 /*Body----------------------------------*/
 .body {
-  background-color: #E6E6E6;
+  /*background-color: #E6E6E6;*/
+  background-color: white;
 }
 .message {
   margin-top: 10px;
@@ -208,7 +209,7 @@ input[type=checkbox] {
   margin: 100px;
 }
 .pauseModal-content {
-  background-color: black;
+  background-color: transparent;
   font-family: 'Cabin Sketch', cursive;
 }
 .pauseModal-content h1 {
@@ -217,7 +218,8 @@ input[type=checkbox] {
   color: white;
   font-weight: bold;
 }
-body.modal-open .container{
+
+body.modal-open .blur{
     -webkit-filter: blur(15px);
     -moz-filter: blur(15px);
     -o-filter: blur(15px);
