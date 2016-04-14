@@ -35,6 +35,9 @@
           <h3>Score:</h3>
           <span id="score">0</span>
         </div>
+        <div class="col-xs-10 rules">
+          <button type="button" class="btn btn-default rules" id="modal-rules" name="button">Rules</button>
+        </div>
       </div>
 
       <div class="row">
@@ -52,6 +55,8 @@
           </div>
         </div>
       </div>
+    </div>
+
 
   <!--Initial Display---------------->
       <div class="row hidden-row">
@@ -92,69 +97,65 @@
 
 <!--Cards------------------------------->
       <div class="container initial-hide">
-      <div class="board">
-        <form class="" action="index.html" method="post">
-
-          <div class="row move">
-            <div id="demo-12-col" class="col-xs-12">
-              <div class="col-xs-2 col-xs-offset-1 size">
-
-                <label class="checkbox-inline">
-                  <input type="checkbox" class="card1" name="name" value="card1"> <img class="card1 cardStyle">
-                </label>
+        <div class="board">
+          <form class="" action="index.html" method="post">
+            <div class="row move">
+              <div id="demo-12-col" class="col-xs-12">
+                <div class="col-xs-2 col-xs-offset-1 size">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" class="card1" name="name" value="card1"> <img class="card1 cardStyle">
+                  </label>
+                </div>
+                <div class="col-xs-2 size">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" class="card2" name="name" value="card2"> <img class="card2 cardStyle">
+                  </label>
+                </div>
+                <div class="col-xs-2 size">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" class="card3" name="name" value="card3"> <img class="card3 cardStyle">
+                  </label>
+                </div>
+                <div class="col-xs-2 size">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" class="card4" name="name" value="card4"> <img class="card4 cardStyle">
+                  </label>
+                </div>
+                <div class="col-xs-2 size">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" class="card5" name="name" value="card5"><img class="card5 cardStyle">
+                  </label>
+                </div>
               </div>
-              <div class="col-xs-2 size">
-                <label class="checkbox-inline">
-                  <input type="checkbox" class="card2" name="name" value="card2"> <img class="card2 cardStyle">
-                </label>
-              </div>
-              <div class="col-xs-2 size">
-                <label class="checkbox-inline">
-                  <input type="checkbox" class="card3" name="name" value="card3"> <img class="card3 cardStyle">
-                </label>
-              </div>
-              <div class="col-xs-2 size">
-                <label class="checkbox-inline">
-                  <input type="checkbox" class="card4" name="name" value="card4"> <img class="card4 cardStyle">
-                </label>
-              </div>
-              <div class="col-xs-2 size">
-                <label class="checkbox-inline">
-                  <input type="checkbox" class="card5" name="name" value="card5"><img class="card5 cardStyle">
-                </label>
-              </div>
-          </div>
-          </div>
-
-          <div class="row move">
-            <div id="demo-12-col" class="col-xs-12">
-              <div class="col-xs-2 col-xs-offset-1 size">
-
-                <label class="checkbox-inline">
-                  <input type="checkbox" class="card6" name="name" value="card6"> <img class="card6 cardStyle">
-                </label>
-              </div>
-              <div class="col-xs-2 size">
-                <label class="checkbox-inline">
-                  <input type="checkbox" class="card7" name="name" value="card7"> <img class="card7 cardStyle">
-                </label>
-              </div>
-              <div class="col-xs-2 size">
-                <label class="checkbox-inline">
-                  <input type="checkbox" class="card8" name="name" value="card8"> <img class="card8 cardStyle">
-                </label>
-              </div>
-              <div class="col-xs-2 size">
-                <label class="checkbox-inline">
-                  <input type="checkbox" class="card9" name="name" value="card9"> <img class="card9 cardStyle">
-                </label>
-              </div>
-              <div class="col-xs-2 size">
-                <label class="checkbox-inline">
-                  <input type="checkbox" class="card10" name="name" value="card10"><img class="card10 cardStyle">
-                </label>
-              </div>
-          </div>
+            </div>
+            <div class="row move">
+              <div id="demo-12-col" class="col-xs-12">
+                <div class="col-xs-2 col-xs-offset-1 size">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" class="card6" name="name" value="card6"> <img class="card6 cardStyle">
+                  </label>
+                </div>
+                <div class="col-xs-2 size">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" class="card7" name="name" value="card7"> <img class="card7 cardStyle">
+                  </label>
+                </div>
+                <div class="col-xs-2 size">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" class="card8" name="name" value="card8"> <img class="card8 cardStyle">
+                  </label>
+                </div>
+                <div class="col-xs-2 size">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" class="card9" name="name" value="card9"> <img class="card9 cardStyle">
+                  </label>
+                </div>
+                <div class="col-xs-2 size">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" class="card10" name="name" value="card10"><img class="card10 cardStyle">
+                  </label>
+                </div>
+            </div>
           </div>
 
           <div class="row move">
@@ -185,7 +186,7 @@
                   <input type="checkbox" class="card15" name="name" value="card15"><img class="card15 cardStyle">
                 </label>
               </div>
-          </div>
+            </div>
           </div>
 
           <div class="row move">
@@ -216,32 +217,18 @@
                   <input type="checkbox" class="card20" name="name" value="card20"><img class="card20 cardStyle">
                 </label>
               </div>
+            </div>
           </div>
-          </div>
-      </div>
-<br></br>
-
-          <div class="row button-row">
-
-
-            <button type="submit" id="submit" class="btn btn-default play" name="button"><img src = "img/submit2.png"></button>
-
-          </div>
-          <!-- <br></br>
-
-          <div class="row rules">
-            <button type="button" class="btn btn-default rules" id="modal-rules" name="button">Rules</button>
-          </div>
-        </form>
-      </div>
-      <!<div class="container-fluid">
-        <div class="row rules">
-          <button type="button" class="btn btn-default rules" id="modal-rules" name="button">Rules</button>
+        </div>
+        <br></br>
+        <div class="row button-row">
+          <button type="submit" id="submit" class="btn btn-default play" name="button"><img src = "img/submit2.png"></button>
         </div>
 
+        </form>
       </div>
-
-<!- Modal -->
+    
+<!-- <!- Rule Modal -->
       <div id="myModal" data-backdrop="static" data-keyboard="false" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
           <!-- Modal content-->
