@@ -64,6 +64,9 @@
   margin: auto;
 }
 
+#replay {
+  background-color: red;
+}
 
 .time-btn {
   text-align: center;
@@ -164,6 +167,13 @@ input[type=checkbox] {
 }
 
 /*Modal Styles_-------------------------*/
+.final-score {
+  font-size: 2em;
+  }
+.GOcontainer {
+  color: white;
+  font-family: 'Cabin Sketch', cursive;
+}
 .GOmodal-content{
   background-color: black;
 }
