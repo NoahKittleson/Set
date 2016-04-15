@@ -118,6 +118,7 @@ $(document).ready(function() {
   var newDeck = new Deck();
   var cardIDArray = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "card11", "card12", "card13", "card14", "card15", "card16", "card17", "card18", "card19", "card20"];
   var newCard;
+  var selectedCardAddresses = [];
   for (var i = 0; i < cardIDArray.length; i++) {
     newCard = newDeck.getNextCard();
     console.log(newCard.getID());
@@ -125,6 +126,23 @@ $(document).ready(function() {
     str = newCard.getID();
     str = str.substring(0, str.length-1);
     $("." + cardIDArray[i]).attr("src", "img/" + str + ".png");
+
+    //attach listener
+    var doubleSetIDs = ["ds1", "ds2", "ds3", "ds4", "ds5"];
+    $("input." + cardIDArray[i]).last().click(function() {
+      var selectedCardAddresses = $('input:checkbox:checked').map(function () {
+        return $(this).attr("src");
+      }).get();
+      for (var i = 0; i < doubleSetIDs.length; i++) {
+        if (i < selectedCardAddresses.length) {
+          $("." + doubleSetIDs[i]).attr("src", selectedCardAddresses[i]);
+        } else {
+          $("." + doubleSetIDs[i]).attr("src", "img/red diamond 1 empty.png");
+        }
+      }
+
+      selectedCardAddresses
+    })
   }
 
 
