@@ -168,6 +168,34 @@ input[type=checkbox] {
     width:20%;
 }
 
+.setInterfaceBackground {
+  background-color: #ffbf80;
+  border-radius: 2px 20px 20px 20px;;
+  border: 2px solid #ffb366;
+  margin-bottom: 30px;
+  /*padding-top: 5px;*/
+  padding-bottom: 20px;
+}
+
+.shared {
+  text-align: center;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+.doubleSet {
+  font-family: 'Cabin Sketch', cursive;
+  /*background-color: #ffd9b3;*/
+  background-color: #ffbf80;
+  opacity: 0.6;
+  max-height: 55px;
+  border-radius: 20px 20px 2px 2px;
+  border: 2px solid #ffb366;
+  text-align: center;
+}
+
+#submit {
+  font-family: 'Cabin Sketch', cursive;
+}
 
 /*Rules------------------*/
 
