@@ -2,11 +2,11 @@
 
 #### _A variation of the game Set._
 
-#### By _****_
+#### By Noah Kittleson, Niem Nguyen, Kellie Olson, Nancy Fang
 
 ## Description
 
-_This game allows users to enter double sets for more points. _
+This game allows users to enter double sets for more points.
 
 ## Setup/Installation Requirements
 
@@ -15,7 +15,7 @@ _This game allows users to enter double sets for more points. _
 
 
 ## GitHub Pages Link
-_http://noahkittleson.github.io/set
+http://noahkittleson.github.io/set
 
 
 ### License
@@ -43,4 +43,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Except as contained in this notice, the name of the X Consortium shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization from the X Consortium.
 
 X Window System is a trademark of X Consortium, Inc.}
-
