@@ -137,7 +137,7 @@ $(document).ready(function() {
         if (i < selectedCardAddresses.length) {
           $("." + doubleSetIDs[i]).attr("src", selectedCardAddresses[i]);
         } else {
-          $("." + doubleSetIDs[i]).attr("src", "img/red diamond 1 empty.png");
+          $("." + doubleSetIDs[i]).attr("src", "img/card.jpg");
         }
       }
 
@@ -148,6 +148,11 @@ $(document).ready(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
+    selectedCardAddresses = [];
+    for (var i = 0; i < doubleSetIDs.length; i++) {
+      $("." + doubleSetIDs[i]).attr("src", "img/card.jpg");
+    }
+
 
     //parse all input (IDs --> Card objects)
     var chosenIDs = [];

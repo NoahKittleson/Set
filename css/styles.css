@@ -140,8 +140,13 @@
 
 .cardStyle {
   max-width:100%;
-  min-width:50%
+  min-width:50%;
+  border-radius: 20px;
+
 }
+
+.special {
+box-shadow: 7px 7px 7px 7px gray;}
 
 .cardShadow {
   box-shadow: 3px 3px 5px 5px #e97c7c;

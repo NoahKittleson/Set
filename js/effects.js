@@ -65,7 +65,11 @@ $(document).ready(function(event) {
   });
 
   $(".cardStyle").click(function() {
-    $(this).addClass("cardShadow");
+    if ($(this).attr("class").split(" ").indexOf("cardShadow") != -1) {
+      $(this).removeClass("cardShadow");
+    } else {
+      $(this).addClass("cardShadow");
+    }
   });
 
   $("#submit").click(function() {
